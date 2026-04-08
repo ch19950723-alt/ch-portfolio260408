@@ -4,11 +4,198 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>作品集｜CH</title>
+    <meta name="description" content="设计师作品集：精选项目、视觉叙事与过程记录。" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>CH</h1>
-    <p>如果你看到这行中文不是乱码，说明编码已修复。</p>
+    <a class="skip" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./" aria-label="返回首页">
+          <span class="brand-mark">CH</span>
+          <span class="brand-sub">Portfolio</span>
+        </a>
+
+        <nav class="nav" aria-label="主导航">
+          <a href="#work">作品</a>
+          <a href="#about">关于</a>
+          <a href="#contact">联系</a>
+          <button id="themeToggle" class="btn btn-ghost" type="button">
+            切换主题
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="hero">
+        <div class="hero-left">
+          <p class="kicker">视觉叙事 / 产品视觉 / 品牌系统</p>
+          <h1 class="title">用“版面与节奏”讲好一个设计故事。</h1>
+          <p class="lede">
+            我做以内容为中心的设计：清晰的信息层级、克制的动效、可复用的系统。
+            这里收录了我近期的精选项目与过程记录。
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#work">看作品</a>
+            <a class="btn btn-ghost" href="#contact">约个时间聊聊</a>
+          </div>
+
+          <div class="meta">
+            <div class="meta-item">
+              <div class="meta-label">常驻</div>
+              <div class="meta-value">中国</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">服务</div>
+              <div class="meta-value">品牌 / UI / 视觉系统</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">邮箱</div>
+              <div class="meta-value">
+                <a href="mailto:hello@example.com">hello@example.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-right" aria-label="精选项目预览">
+          <div class="cover">
+            <div class="cover-badge">Selected</div>
+            <div class="cover-title">编辑式排版</div>
+            <div class="cover-desc">
+              大字号、网格与留白，让作品页“像文章一样可阅读”。
+            </div>
+          </div>
+
+          <div class="stats" aria-label="概览">
+            <div class="stat">
+              <div class="stat-num" id="statCount">3+</div>
+              <div class="stat-label">精选案例</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num">3</div>
+              <div class="stat-label">领域覆盖</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" id="statYear">2026</div>
+              <div class="stat-label">持续更新</div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="work" class="section">
+        <div class="section-head">
+          <h2 class="section-title">作品</h2>
+          <p class="section-desc">点击卡片查看项目详情。</p>
+        </div>
+
+        <div class="work-grid" id="workGrid" aria-live="polite"></div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-head">
+          <h2 class="section-title">关于我</h2>
+          <p class="section-desc">
+            建议写“你做什么 + 你怎么做 + 你为什么这样做”，让客户快速判断匹配度。
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>我在意的事</h3>
+            <ul>
+              <li>信息层级：让阅读变轻松</li>
+              <li>系统化：把一次交付变成可复用资产</li>
+              <li>细节：排版、留白、动效的克制</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <h3>能力栈</h3>
+            <div class="tags">
+              <span class="tag">品牌识别</span>
+              <span class="tag">UI / 视觉规范</span>
+              <span class="tag">信息架构</span>
+              <span class="tag">版式设计</span>
+              <span class="tag">动效节奏</span>
+              <span class="tag">交付与协作</span>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h3>工具</h3>
+            <p class="muted">
+              Figma / Adobe / 3D / 文档与原型。也能和开发一起把设计落地成高质量 UI。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-head">
+          <h2 class="section-title">联系</h2>
+          <p class="section-desc">
+            留下需求，我会在 24–48 小时内回复。此表单为前端演示。
+          </p>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <label>
+            <span>你的称呼</span>
+            <input name="name" autocomplete="name" required />
+          </label>
+
+          <label>
+            <span>邮箱</span>
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+
+          <label class="full">
+            <span>你想做什么？</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn" type="submit">发送（演示）</button>
+            <a class="btn btn-ghost" href="mailto:hello@example.com">直接发邮件</a>
+          </div>
+
+          <p class="form-note muted" id="formNote" role="status"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="muted">© <span id="year"></span> CH. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#work">作品</a>
+          <a href="#about">关于</a>
+          <a href="#contact">联系</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog class="dialog" id="workDialog" aria-label="作品详情">
+      <div class="dialog-inner">
+        <button class="dialog-close btn btn-ghost" id="dialogClose" type="button">
+          关闭
+        </button>
+        <div id="dialogBody"></div>
+      </div>
+    </dialog>
+
     <script src="./script.js" type="module"></script>
   </body>
 </html>
